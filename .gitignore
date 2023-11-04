@@ -1,6 +1,9 @@
 # Created by https://www.gitignore.io/api/node
 
 .DS_Store
+env.js
+*env.js
+*env copy.js
 
 ### Node ###
 # Logs
