@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react'
-import API_KEY from '../data/env'
 import GifList from './GifList'
 import GifSearch from './GifSearch'
 import { GifProvider } from './GifProvider'
@@ -13,7 +12,7 @@ function GifListContainer() {
   // console.log(count.current);
 
   function handleSearch(searchInput) {
-    fetch(`https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${searchInput}&limit=3&offset=0&rating=g&lang=en&bundle=messaging_non_clips`)
+    fetch('https://api.giphy.com/v1/gifs/search?q=dolphin&api_key=08FFSB1qodYwCLmYVd1MzmsNMhf9125u')
       .then(r => r.json())
       .then(gifList => setList(gifList.data))
   }
